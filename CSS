@@ -1,0 +1,43 @@
+.lw { font-size: 60px; }
+.box-init {
+    font-size: larger; /* размер шрифта */
+    color: #fff; /* цвет текста */
+    border-radius: 5px; /* скругление углов */
+    background-color: #2196f3; /* цвет фона */
+    border: 1px solid black; /* граница блока */
+    padding: 10px; /* внутренние отступы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "my-header my-header my-header"
+        "my-aside my-main my-nav"
+        "my-section my-main my-nav"
+        "my-footer my-footer my-footer";
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+.l-aside {
+    grid-area: my-aside;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+}
+.l-main {
+    grid-area: my-main;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+}
+.l-section {
+    grid-area: my-section;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+}
+.l-header {
+    grid-area: my-header;
+}
+.l-nav {
+    grid-area: my-nav;
+}
+.l-footer {
+    grid-area: my-footer;
+}
